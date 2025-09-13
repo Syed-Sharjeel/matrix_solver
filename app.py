@@ -3,6 +3,8 @@ import numpy as np
 from google import genai
 import json
 
+st.markdown('# AI Powered Matrix Solver')
+st.markdown('*Convert your matrices into RREF with ease*')
 client = genai.Client(
     api_key=(st.secrets['GOOGLE_API_KEY'])
 )
