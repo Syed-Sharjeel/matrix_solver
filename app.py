@@ -11,7 +11,7 @@ client = genai.Client(
 
 matrix_input_coff = st.text_area(label= 'Enter Coffecients', placeholder="Enter matrix (rows separated by newline, values by space): 1 2 3\n4 5 6\n7 8 9", )
 matrix_X = np.array([list(map(float, row.split())) for row in matrix_input_coff.splitlines()])
-matrix_input_y = st.text_area("Enter matrix (rows separated by newline, values by space):", "1 2 3\n4 5 6\n7 8 9")
+matrix_input_y = st.text_area(label= 'Enter Constants', placeholder="Enter matrix (rows separated by newline, values by space): 1 2 3\n4 5 6\n7 8 9", )
 matrix_Y = np.array([list(map(float, row.split())) for row in matrix_input_y.splitlines()])
 if st.button('Generate Matrix'):
     st.write(matrix_X, matrix_Y)
