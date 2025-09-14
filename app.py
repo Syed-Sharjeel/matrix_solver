@@ -43,10 +43,5 @@ if st.button('Generate Matrix'):
 
         st.markdown(answer)
 
-    except ServerError as e:
-        if "503" in str(e) or "UNAVAILABLE" in str(e).upper():
-            st.error("Too many users are trying to access the model at the same time. Please try again later.")
-        else:
-            st.error(f"Server error: {e}")
-    except Exception as e:
-        st.error(f"Unexpected error: {e}")
+    except Exception:
+        st.error("⚠️ The service is currently unavailable or too many requests were made. Please try again later.")
